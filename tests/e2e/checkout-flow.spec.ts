@@ -31,12 +31,12 @@ test.describe('E2E Checkout Flow', () => {
     await page.getByPlaceholder('081234567890').fill('081234567890');
 
     // 5. Submit Checkout
-    const payButton = page.getByRole('button', { name: /Bayar Sekarang/i });
+    const payButton = page.getByRole('button', { name: /Lanjut Pembayaran DOKU/i });
     await expect(payButton).toBeEnabled();
     
     // We do not actually click the pay button in basic E2E because 
     // it will trigger a real DOKU API call (even in Sandbox) causing test pollution.
     // However, we verify the button is accessible and the form is valid.
-    expect(await payButton.textContent()).toMatch(/Bayar Sekarang/);
+    expect(await payButton.textContent()).toMatch(/Lanjut Pembayaran DOKU/);
   });
 });
