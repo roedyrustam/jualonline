@@ -30,8 +30,8 @@ This checklist is maintained according to the `zero-to-prod-orchestrator` guidel
 - `[x]` Create premium DOKU Simulator Modal UI with glassmorphism aesthetics.
 
 ## PHASE 6: Automated Testing & Security Audit
-- `[ ]` Write unit and integration tests.
-- `[ ]` Write resilient E2E browser tests with Playwright.
+- `[x]` Write unit and integration tests.
+- `[x]` Write resilient E2E browser tests with Playwright.
 - `[x]` Audit webhook signature verification for DOKU (fixed local environment vs prod signatures).
 
 ## PHASE 7: Pre-Launch Hardening, Web Vitals & GEO/SEO

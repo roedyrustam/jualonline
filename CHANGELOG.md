@@ -9,6 +9,11 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Added `X-Simulate-Webhook` header support in the local DOKU Webhook handler (`app/api/webhooks/doku/route.ts`) to allow seamless local testing of payment success flows without requiring an actual HMAC signature (restricted to `development` environments).
 - Added Production Readiness Checkout Routing: The frontend (`app/checkout/[productSlug]/page.tsx`) now natively detects the sandbox/production environment from the API and instantly redirects users to the live DOKU Payment Gateway URL if in production mode, bypassing the local development simulator.
 
+- Added `Vitest` unit testing for the `doku.ts` webhook HMAC-SHA256 signature generator to ensure cryptographic security.
+- Added `Playwright` End-to-End (E2E) testing framework.
+- Wrote E2E automated test for the Guest Checkout flow (`tests/e2e/checkout-flow.spec.ts`).
+- Created `.github/workflows/test-and-deploy.yml` for Continuous Integration.
+
 ### Changed
 - Refactored `layout.tsx` to use `next/font/google` for Cormorant Garamond, Inter, and Plus Jakarta Sans to eliminate Cumulative Layout Shift (CLS) and improve LCP metrics.
 - Injected `Organization` and `WebSite` JSON-LD Structured Data in `app/page.tsx` for Google Rich Snippets and Generative Engine Optimization (GEO).

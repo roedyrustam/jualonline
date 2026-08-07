@@ -16,6 +16,7 @@ Platform toko produk digital modern dan mewah yang dirancang khusus untuk menjua
 - **Keamanan File**: Secure Local Protection (`/protected-downloads/`) dengan Secure Token Link Handler (`/api/download/[token]`)
 - **Autentikasi Admin**: Session-based encrypted Cookie Authentication via Next.js Middleware
 - **AI Agentic Integration**: Standalone TypeScript DOKU MCP Server (`/doku-mcp-server`) untuk eksekusi checkout & pengecekan status otomatis via LLM agents.
+- **CI/CD & Automated Testing**: GitHub Actions, Vitest (Unit Tests), dan Playwright (E2E Tests).
 
 ---
 
