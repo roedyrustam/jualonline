@@ -24,11 +24,11 @@ test.describe('E2E Checkout Flow', () => {
     await buyButton.click();
 
     // 4. Fill in the Guest Checkout Form
-    await expect(page.getByText('Informasi Pembeli')).toBeVisible();
+    await expect(page.getByText('Data Informasi Pembeli')).toBeVisible();
     
-    await page.fill('input[id="name"]', 'Budi Test');
-    await page.fill('input[id="email"]', 'budi@example.com');
-    await page.fill('input[id="phone"]', '081234567890');
+    await page.getByPlaceholder('Contoh: Roedy Rustam').fill('Budi Test');
+    await page.getByPlaceholder('email@domain.com').fill('budi@example.com');
+    await page.getByPlaceholder('Contoh: 081234567890').fill('081234567890');
 
     // 5. Submit Checkout
     const payButton = page.getByRole('button', { name: /Bayar Sekarang/i });

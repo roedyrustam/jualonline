@@ -16,16 +16,16 @@ Test timeout of 30000ms exceeded.
 ```
 
 ```
-Error: page.fill: Test timeout of 30000ms exceeded.
+Error: locator.fill: Test timeout of 30000ms exceeded.
 Call log:
-  - waiting for locator('input[id="name"]')
+  - waiting for getByPlaceholder('Contoh: 081234567890')
 
 ```
 
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=f1e1]:
+- generic [ref=f1e1]:
   - status [ref=f1e2]:
     - generic [ref=f1e7]:
       - text: Static route
@@ -66,10 +66,10 @@ Call log:
           - generic [ref=f1e54]:
             - generic [ref=f1e55]:
               - generic [ref=f1e56]: Nama Lengkap *
-              - 'textbox "Contoh: Roedy Rustam" [ref=f1e57]'
+              - 'textbox "Contoh: Roedy Rustam" [ref=f1e57]': Budi Test
             - generic [ref=f1e58]:
               - generic [ref=f1e59]: Alamat Email *
-              - textbox "email@domain.com" [ref=f1e60]
+              - textbox "email@domain.com" [active] [ref=f1e60]: budi@example.com
               - paragraph [ref=f1e61]: Kuitansi pembayaran dan informasi lisensi akan dikirimkan ke email ini.
             - generic [ref=f1e62]:
               - generic [ref=f1e63]: Nomor WhatsApp / HP *
@@ -180,12 +180,12 @@ Call log:
   24 |     await buyButton.click();
   25 | 
   26 |     // 4. Fill in the Guest Checkout Form
-  27 |     await expect(page.getByText('Informasi Pembeli')).toBeVisible();
+  27 |     await expect(page.getByText('Data Informasi Pembeli')).toBeVisible();
   28 |     
-> 29 |     await page.fill('input[id="name"]', 'Budi Test');
-     |                ^ Error: page.fill: Test timeout of 30000ms exceeded.
-  30 |     await page.fill('input[id="email"]', 'budi@example.com');
-  31 |     await page.fill('input[id="phone"]', '081234567890');
+  29 |     await page.getByPlaceholder('Contoh: Roedy Rustam').fill('Budi Test');
+  30 |     await page.getByPlaceholder('email@domain.com').fill('budi@example.com');
+> 31 |     await page.getByPlaceholder('Contoh: 081234567890').fill('081234567890');
+     |                                                         ^ Error: locator.fill: Test timeout of 30000ms exceeded.
   32 | 
   33 |     // 5. Submit Checkout
   34 |     const payButton = page.getByRole('button', { name: /Bayar Sekarang/i });
