@@ -28,7 +28,7 @@ test.describe('E2E Checkout Flow', () => {
     
     await page.getByPlaceholder('Contoh: Roedy Rustam').fill('Budi Test');
     await page.getByPlaceholder('email@domain.com').fill('budi@example.com');
-    await page.getByPlaceholder('Contoh: 081234567890').fill('081234567890');
+    await page.getByPlaceholder('081234567890').fill('081234567890');
 
     // 5. Submit Checkout
     const payButton = page.getByRole('button', { name: /Bayar Sekarang/i });
