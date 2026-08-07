@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#2C2A26"/>
+  <rect x="50" y="50" width="700" height="500" fill="#1C1B18" rx="16"/>
+  <text x="100" y="140" font-family="serif" font-size="38" fill="#A37D4C">CINEMATIC FILM GRAIN</text>
+  <text x="100" y="180" font-family="sans-serif" font-size="14" fill="#F3F0E6" letter-spacing="3">ANALOG 35MM LOOK</text>
+  <rect x="100" y="220" width="600" height="260" fill="#0F4C3A" opacity="0.6" rx="8"/>
+</svg>

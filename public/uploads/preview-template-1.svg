@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#F3F0E6"/>
+  <rect x="40" y="40" width="720" height="520" fill="#FFFFFF" rx="12" stroke="#E6E3D8" stroke-width="2"/>
+  <!-- Editorial Header Line -->
+  <line x1="80" y1="100" x2="720" y2="100" stroke="#1C1B18" stroke-width="1"/>
+  <!-- Typography Mockup -->
+  <text x="80" y="150" font-family="serif" font-size="32" font-weight="600" fill="#1C1B18" letter-spacing="1">ATELIER STUDIO</text>
+  <text x="80" y="180" font-family="sans-serif" font-size="14" fill="#5C5953" letter-spacing="2">NEXT.JS 15 EDITORIAL TEMPLATE</text>
+  <!-- Card Mockups -->
+  <rect x="80" y="220" width="280" height="280" fill="#F9F8F3" rx="8" stroke="#E6E3D8"/>
+  <rect x="380" y="220" width="340" height="130" fill="#0F4C3A" rx="8"/>
+  <text x="405" y="280" font-family="serif" font-size="22" fill="#F9F8F3">Minimalist Architecture &amp; Design</text>
+  <rect x="380" y="370" width="340" height="130" fill="#1C1B18" rx="8"/>
+  <text x="405" y="430" font-family="serif" font-size="22" fill="#A37D4C">Curated Luxury Layout</text>
+  <circle cx="700" cy="80" r="16" fill="#A37D4C"/>
+</svg>

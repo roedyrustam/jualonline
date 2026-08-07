@@ -1,0 +1,21 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+
+## [Unreleased]
+### Added
+- Created `doku-mcp-server` standalone TypeScript MCP Server to enable autonomous AI agent transactions via DOKU Payment Gateway APIs.
+- Configured `.agents/mcp.json` to properly point to the newly built DOKU MCP Server.
+- Added `X-Simulate-Webhook` header support in the local DOKU Webhook handler (`app/api/webhooks/doku/route.ts`) to allow seamless local testing of payment success flows without requiring an actual HMAC signature (restricted to `development` environments).
+- Added Production Readiness Checkout Routing: The frontend (`app/checkout/[productSlug]/page.tsx`) now natively detects the sandbox/production environment from the API and instantly redirects users to the live DOKU Payment Gateway URL if in production mode, bypassing the local development simulator.
+
+### Changed
+- Refactored `layout.tsx` to use `next/font/google` for Cormorant Garamond, Inter, and Plus Jakarta Sans to eliminate Cumulative Layout Shift (CLS) and improve LCP metrics.
+- Injected `Organization` and `WebSite` JSON-LD Structured Data in `app/page.tsx` for Google Rich Snippets and Generative Engine Optimization (GEO).
+- Added dynamic `generateMetadata` and `Product` JSON-LD to `app/products/[slug]/page.tsx` for optimal search engine crawling and product rich snippets.
+- Removed custom `DokuPaymentModal` simulator completely. The application now natively integrates the **DOKU Jokul Checkout Popup** library, allowing the official DOKU Payment page to render directly as an in-app modal without forcing users to leave the application (with automatic fallback to redirect if the script fails).
+- Reinstated background payment polling: The checkout page now actively polls `/api/orders/status` behind the scenes while the DOKU modal is open. Upon detecting a successful webhook confirmation, the frontend instantly closes the flow and redirects the user to the secured success and file-download page.
+- Complete visual UI overhaul of `DokuPaymentModal.tsx` to implement a highly premium, glassmorphism aesthetic with animated real-time scanning states and better user affordances (Removed in subsequent iteration in favor of official DOKU flow).
+
+### Fixed
+- Fixed DOKU Signature Verification failures when simulating payments locally by properly distinguishing between production webhook payloads and local simulator payloads.

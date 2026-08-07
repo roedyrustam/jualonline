@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#0F4C3A"/>
+  <rect x="50" y="50" width="700" height="500" fill="#1C1B18" rx="16"/>
+  <text x="100" y="140" font-family="serif" font-size="38" fill="#F9F8F3">LUXE AGENCY SAAS</text>
+  <text x="100" y="180" font-family="sans-serif" font-size="14" fill="#A37D4C" letter-spacing="3">NEXT.JS 15 &amp; TAILWIND V4</text>
+  <rect x="100" y="220" width="280" height="280" fill="#2C2A26" rx="8"/>
+  <rect x="410" y="220" width="280" height="130" fill="#0F4C3A" rx="8"/>
+  <rect x="410" y="370" width="280" height="130" fill="#A37D4C" rx="8"/>
+</svg>

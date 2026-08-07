@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #F9F8F3;
+    --bg-cream-card: #FFFFFF;
+    --bg-cream-accent: #F3F0E6;
+    --text-charcoal: #1C1B18;
+    --text-charcoal-muted: #5C5953;
+    --emerald-accent: #0F4C3A;
+    --emerald-light: #E6F0EC;
+    --bronze-accent: #A37D4C;
+    --bronze-light: #F7F3EC;
+    --border-warm: #E6E3D8;
+    --border-dark: #2C2A26;
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--text-charcoal);
+    font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-serif-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom Utilities for Editorial Luxury Aesthetics */
+.badge-editorial {
+  background-color: var(--bg-cream-accent);
+  color: var(--text-charcoal);
+  border: 1px solid var(--border-warm);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.btn-editorial-primary {
+  background-color: var(--text-charcoal);
+  color: #F9F8F3;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.btn-editorial-primary:hover {
+  background-color: var(--emerald-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -4px rgba(15, 76, 58, 0.25);
+}
+
+.btn-editorial-secondary {
+  background-color: transparent;
+  color: var(--text-charcoal);
+  border: 1px solid var(--text-charcoal);
+  transition: all 0.25s ease;
+}
+
+.btn-editorial-secondary:hover {
+  background-color: var(--text-charcoal);
+  color: #F9F8F3;
+}
+
+.card-editorial {
+  background: #FFFFFF;
+  border: 1px solid var(--border-warm);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-editorial:hover {
+  border-color: var(--bronze-accent);
+  box-shadow: 0 16px 32px -8px rgba(28, 27, 24, 0.06);
+  transform: translateY(-3px);
+}
+
+.editorial-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--border-warm) 50%, transparent 100%);
+}
