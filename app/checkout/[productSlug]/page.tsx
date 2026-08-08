@@ -189,9 +189,9 @@ export default function CheckoutPage({
 
   if (loading) {
     return (
-      <div className="min-h-screen flex flex-col bg-[#F9F8F3]">
+      <div className="min-h-screen flex flex-col bg-slate-50">
         <Navbar />
-        <div className="flex-1 flex items-center justify-center py-20 text-[#5C5953] text-sm">
+        <div className="flex-1 flex items-center justify-center py-20 text-slate-500 text-sm">
           Memuat informasi checkout...
         </div>
         <Footer />
@@ -201,11 +201,11 @@ export default function CheckoutPage({
 
   if (!product) {
     return (
-      <div className="min-h-screen flex flex-col bg-[#F9F8F3]">
+      <div className="min-h-screen flex flex-col bg-slate-50">
         <Navbar />
         <div className="flex-1 flex flex-col items-center justify-center py-20 text-center space-y-4">
-          <p className="text-base text-[#1C1B18] font-bold">Produk tidak ditemukan</p>
-          <Link href="/" className="text-xs text-[#0F4C3A] underline font-semibold">
+          <p className="text-base text-slate-900 font-bold">Produk tidak ditemukan</p>
+          <Link href="/" className="text-xs text-indigo-600 underline font-semibold">
             Kembali ke Katalog Produk
           </Link>
         </div>
@@ -219,7 +219,7 @@ export default function CheckoutPage({
     : 'https://sandbox.doku.com/jokul-checkout-js/v1/jokul-checkout-1.0.0.js';
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F9F8F3]">
+    <div className="min-h-screen flex flex-col bg-slate-50">
       <Script src={dokuScriptUrl} strategy="lazyOnload" />
       <Navbar />
 
@@ -228,7 +228,7 @@ export default function CheckoutPage({
         <div className="mb-6">
           <Link
             href={`/products/${product.slug}`}
-            className="inline-flex items-center space-x-2 text-xs font-semibold text-[#5C5953] hover:text-[#1C1B18]"
+            className="inline-flex items-center space-x-2 text-xs font-semibold text-slate-500 hover:text-slate-900"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Kembali ke Detail Produk</span>
@@ -236,10 +236,10 @@ export default function CheckoutPage({
         </div>
 
         <div className="text-center space-y-2 mb-10">
-          <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#1C1B18]">
+          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">
             Formulir Pembelian Produk Digital
           </h1>
-          <p className="text-xs text-[#5C5953]">
+          <p className="text-xs text-slate-500">
             Lengkapi data diri Anda untuk pemrosesan lisensi &amp; pengiriman file via DOKU Payment Gateway
           </p>
         </div>
@@ -247,10 +247,10 @@ export default function CheckoutPage({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
           {/* Form Area */}
-          <div className="lg:col-span-7 bg-white p-8 rounded-2xl border border-[#E6E3D8] shadow-sm space-y-6">
+          <div className="lg:col-span-7 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
             
-            <div className="flex items-center space-x-2 text-xs font-bold text-[#1C1B18] uppercase tracking-wider pb-4 border-b border-[#E6E3D8]">
-              <Lock className="w-4 h-4 text-[#A37D4C]" />
+            <div className="flex items-center space-x-2 text-xs font-bold text-slate-900 uppercase tracking-wider pb-4 border-b border-slate-200">
+              <Lock className="w-4 h-4 text-sky-500" />
               <span>1. Data Informasi Pembeli</span>
             </div>
 
@@ -263,7 +263,7 @@ export default function CheckoutPage({
             <form onSubmit={handleSubmitCheckout} className="space-y-4">
               
               <div>
-                <label className="block text-xs font-semibold text-[#1C1B18] uppercase tracking-wider mb-1">
+                <label className="block text-xs font-semibold text-slate-900 uppercase tracking-wider mb-1">
                   Nama Lengkap *
                 </label>
                 <input
@@ -272,12 +272,12 @@ export default function CheckoutPage({
                   placeholder="Contoh: Roedy Rustam"
                   value={customerName}
                   onChange={(e) => setCustomerName(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg border border-[#E6E3D8] text-xs text-[#1C1B18] focus:outline-none focus:border-[#1C1B18]"
+                  className="w-full px-4 py-3 rounded-lg border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-slate-900"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-[#1C1B18] uppercase tracking-wider mb-1">
+                <label className="block text-xs font-semibold text-slate-900 uppercase tracking-wider mb-1">
                   Alamat Email *
                 </label>
                 <input
@@ -286,15 +286,15 @@ export default function CheckoutPage({
                   placeholder="email@domain.com"
                   value={customerEmail}
                   onChange={(e) => setCustomerEmail(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg border border-[#E6E3D8] text-xs text-[#1C1B18] focus:outline-none focus:border-[#1C1B18]"
+                  className="w-full px-4 py-3 rounded-lg border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-slate-900"
                 />
-                <p className="text-[11px] text-[#5C5953] mt-1">
+                <p className="text-[11px] text-slate-500 mt-1">
                   Kuitansi pembayaran dan informasi lisensi akan dikirimkan ke email ini.
                 </p>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-[#1C1B18] uppercase tracking-wider mb-1">
+                <label className="block text-xs font-semibold text-slate-900 uppercase tracking-wider mb-1">
                   Nomor WhatsApp / HP *
                 </label>
                 <input
@@ -303,55 +303,55 @@ export default function CheckoutPage({
                   placeholder="081234567890"
                   value={customerPhone}
                   onChange={(e) => setCustomerPhone(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg border border-[#E6E3D8] text-xs text-[#1C1B18] focus:outline-none focus:border-[#1C1B18]"
+                  className="w-full px-4 py-3 rounded-lg border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-slate-900"
                 />
               </div>
 
               {/* Coupon Code Input Box */}
               <div className="pt-2">
-                <label className="block text-xs font-semibold text-[#1C1B18] uppercase tracking-wider mb-1">
+                <label className="block text-xs font-semibold text-slate-900 uppercase tracking-wider mb-1">
                   Kode Kupon Diskon (Opsional)
                 </label>
                 <div className="flex gap-2">
                   <div className="relative flex-1">
-                    <Tag className="w-4 h-4 text-[#A37D4C] absolute left-3 top-3" />
+                    <Tag className="w-4 h-4 text-sky-500 absolute left-3 top-3" />
                     <input
                       type="text"
                       placeholder="Coba: ATELIER20 atau WELCOME10"
                       value={couponCodeInput}
                       onChange={(e) => setCouponCodeInput(e.target.value)}
-                      className="w-full pl-9 pr-3 py-2.5 rounded-lg border border-[#E6E3D8] text-xs text-[#1C1B18] uppercase font-mono"
+                      className="w-full pl-9 pr-3 py-2.5 rounded-lg border border-slate-200 text-xs text-slate-900 uppercase font-mono"
                     />
                   </div>
                   <button
                     type="button"
                     onClick={handleApplyCoupon}
                     disabled={couponLoading}
-                    className="px-4 py-2.5 bg-[#1C1B18] hover:bg-[#0F4C3A] text-white text-xs font-bold rounded-lg transition-colors cursor-pointer"
+                    className="px-4 py-2.5 bg-slate-900 hover:bg-indigo-600 text-white text-xs font-bold rounded-lg transition-colors cursor-pointer"
                   >
                     {couponLoading ? 'Cek...' : 'Pasang'}
                   </button>
                 </div>
                 {couponMsg && (
-                  <p className={`text-[11px] mt-1.5 font-medium ${appliedCoupon ? 'text-[#0F4C3A]' : 'text-red-600'}`}>
+                  <p className={`text-[11px] mt-1.5 font-medium ${appliedCoupon ? 'text-indigo-600' : 'text-red-600'}`}>
                     {couponMsg}
                   </p>
                 )}
               </div>
 
               {/* Payment Gateway Box */}
-              <div className="pt-4 border-t border-[#E6E3D8]">
-                <div className="p-4 bg-[#F9F8F3] rounded-xl border border-[#E6E3D8] space-y-3">
+              <div className="pt-4 border-t border-slate-200">
+                <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-xs font-bold text-[#1C1B18]">
-                      <CreditCard className="w-4 h-4 text-[#0F4C3A]" />
+                    <div className="flex items-center space-x-2 text-xs font-bold text-slate-900">
+                      <CreditCard className="w-4 h-4 text-indigo-600" />
                       <span>DOKU Payment Gateway</span>
                     </div>
-                    <span className="text-[10px] bg-[#0F4C3A] text-white px-2 py-0.5 rounded-full font-bold">
+                    <span className="text-[10px] bg-indigo-600 text-white px-2 py-0.5 rounded-full font-bold">
                       Secured 256-bit
                     </span>
                   </div>
-                  <p className="text-[11px] text-[#5C5953]">
+                  <p className="text-[11px] text-slate-500">
                     Mendukung QRIS (GoPay, OVO, ShopeePay, Dana), Virtual Account (BCA, Mandiri, BRI, BNI), dan Kartu Kredit.
                   </p>
                 </div>
@@ -360,7 +360,7 @@ export default function CheckoutPage({
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full py-4 bg-[#1C1B18] text-[#F9F8F3] hover:bg-[#0F4C3A] rounded-xl font-semibold text-sm transition-all shadow-md disabled:opacity-50 cursor-pointer"
+                className="w-full py-4 bg-slate-900 text-white hover:bg-indigo-600 rounded-xl font-semibold text-sm transition-all shadow-md disabled:opacity-50 cursor-pointer"
               >
                 {submitting ? 'Memproses Transaksi DOKU...' : `Lanjut Pembayaran DOKU (${formatRupiah(finalAmount)})`}
               </button>
@@ -370,14 +370,14 @@ export default function CheckoutPage({
           </div>
 
           {/* Order Summary Box */}
-          <div className="lg:col-span-5 bg-[#1C1B18] text-[#F9F8F3] p-8 rounded-2xl border border-[#2C2A26] space-y-6">
+          <div className="lg:col-span-5 bg-slate-900 text-white p-8 rounded-2xl border border-slate-800 space-y-6">
             
-            <h3 className="font-serif text-xl font-bold border-b border-[#2C2A26] pb-4">
+            <h3 className="font-heading text-xl font-bold border-b border-slate-800 pb-4">
               Ringkasan Pesanan
             </h3>
 
-            <div className="flex items-start space-x-4 pb-4 border-b border-[#2C2A26]">
-              <div className="relative w-20 h-16 rounded-lg overflow-hidden bg-[#2C2A26] shrink-0 border border-[#A37D4C]/30">
+            <div className="flex items-start space-x-4 pb-4 border-b border-slate-800">
+              <div className="relative w-20 h-16 rounded-lg overflow-hidden bg-slate-800 shrink-0 border border-sky-500/30">
                 <Image
                   src={product.previewImage}
                   alt={product.title}
@@ -386,23 +386,23 @@ export default function CheckoutPage({
                 />
               </div>
               <div className="space-y-1">
-                <span className="text-[10px] uppercase font-bold tracking-widest text-[#A37D4C]">
+                <span className="text-[10px] uppercase font-bold tracking-widest text-sky-500">
                   {product.category}
                 </span>
-                <h4 className="font-serif text-base font-bold text-white leading-tight">
+                <h4 className="font-heading text-base font-bold text-white leading-tight">
                   {product.title}
                 </h4>
               </div>
             </div>
 
-            <div className="space-y-2 text-xs text-[#A39E93]">
+            <div className="space-y-2 text-xs text-slate-400">
               <div className="flex justify-between">
                 <span>Harga Produk Awal</span>
                 <span className="text-white font-medium">{formatRupiah(product.price)}</span>
               </div>
 
               {appliedCoupon && (
-                <div className="flex justify-between text-[#0F4C3A] bg-[#E6F0EC]/10 p-2 rounded-lg border border-[#0F4C3A]/30 font-bold">
+                <div className="flex justify-between text-indigo-600 bg-indigo-50/10 p-2 rounded-lg border border-indigo-600/30 font-bold">
                   <span>Diskon Kupon ({appliedCoupon.code})</span>
                   <span>-{formatRupiah(appliedCoupon.discountAmount)}</span>
                 </div>
@@ -410,22 +410,22 @@ export default function CheckoutPage({
 
               <div className="flex justify-between">
                 <span>Biaya Layanan DOKU</span>
-                <span className="text-[#0F4C3A] font-semibold">GRATIS</span>
+                <span className="text-indigo-600 font-semibold">GRATIS</span>
               </div>
 
-              <div className="pt-3 border-t border-[#2C2A26] flex justify-between text-sm font-bold text-white">
+              <div className="pt-3 border-t border-slate-800 flex justify-between text-sm font-bold text-white">
                 <span>Total Pembayaran</span>
-                <span className="text-[#A37D4C] font-serif text-lg">{formatRupiah(finalAmount)}</span>
+                <span className="text-sky-500 font-heading text-lg">{formatRupiah(finalAmount)}</span>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#2C2A26] space-y-2 text-[11px] text-[#A39E93]">
+            <div className="pt-4 border-t border-slate-800 space-y-2 text-[11px] text-slate-400">
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#0F4C3A]" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600" />
                 <span>Link unduhan otomatis dibuat setelah konfirmasi DOKU</span>
               </div>
               <div className="flex items-center space-x-2">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#A37D4C]" />
+                <ShieldCheck className="w-3.5 h-3.5 text-sky-500" />
                 <span>Lisensi komersial seumur hidup tanpa biaya tambahan</span>
               </div>
             </div>

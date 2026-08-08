@@ -46,7 +46,7 @@ export default async function HomePage({
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F9F8F3]">
+    <div className="min-h-screen flex flex-col bg-slate-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -56,34 +56,34 @@ export default async function HomePage({
       <main className="flex-1">
         
         {/* Editorial Hero Section */}
-        <section className="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#F3F0E6] to-[#F9F8F3] border-b border-[#E6E3D8]">
+        <section className="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50 border-b border-slate-200">
           <div className="max-w-5xl mx-auto text-center space-y-6">
             
-            <div className="inline-flex items-center space-x-2 bg-white border border-[#E6E3D8] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider text-[#1C1B18] uppercase shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-[#A37D4C]" />
+            <div className="inline-flex items-center space-x-2 bg-white border border-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider text-slate-900 uppercase shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-sky-500" />
               <span>Atelier Digital Collection 2026</span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-[#1C1B18] tracking-tight leading-[1.1]">
+            <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 tracking-tight leading-[1.1]">
               Aset Digital Modern untuk Kreator, Desainer &amp; Studio
             </h1>
 
-            <p className="text-base sm:text-lg text-[#5C5953] max-w-2xl mx-auto leading-relaxed font-sans">
+            <p className="text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed font-sans">
               Koleksi kurasi template website Next.js, preset tone Lightroom sinematik, dan e-book strategi bisnis digital. Pembayaran instan &amp; aman via Payment Gateway DOKU.
             </p>
 
             {/* Feature Pills */}
-            <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-[#1C1B18] font-medium">
+            <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-900 font-medium">
               <div className="flex items-center space-x-2">
-                <ShieldCheck className="w-4 h-4 text-[#0F4C3A]" />
+                <ShieldCheck className="w-4 h-4 text-indigo-600" />
                 <span>Terintegrasi DOKU Payment Gateway</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Download className="w-4 h-4 text-[#A37D4C]" />
+                <Download className="w-4 h-4 text-sky-500" />
                 <span>Instan Secure Token Download Link</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Award className="w-4 h-4 text-[#1C1B18]" />
+                <Award className="w-4 h-4 text-slate-900" />
                 <span>Lisensi Komersial Lengkap</span>
               </div>
             </div>
@@ -95,10 +95,10 @@ export default async function HomePage({
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           
           <div className="text-center space-y-2">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1C1B18]">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">
               Jelajahi Katalog Produk
             </h2>
-            <p className="text-sm text-[#5C5953]">
+            <p className="text-sm text-slate-500">
               Pilih produk digital sesuai kebutuhan proyek Anda dan nikmati akses langsung setelah pembayaran.
             </p>
           </div>
@@ -114,9 +114,9 @@ export default async function HomePage({
               ))}
             </div>
           ) : (
-            <div className="text-center py-20 bg-white rounded-2xl border border-[#E6E3D8] my-8">
-              <p className="text-base text-[#5C5953]">Belum ada produk dalam kategori ini.</p>
-              <Link href="/" className="inline-block mt-4 text-xs font-semibold text-[#0F4C3A] underline">
+            <div className="text-center py-20 bg-white rounded-2xl border border-slate-200 my-8">
+              <p className="text-base text-slate-500">Belum ada produk dalam kategori ini.</p>
+              <Link href="/" className="inline-block mt-4 text-xs font-semibold text-indigo-600 underline">
                 Lihat Semua Produk
               </Link>
             </div>
@@ -125,23 +125,23 @@ export default async function HomePage({
         </section>
 
         {/* Editorial Feature Highlight Banner */}
-        <section className="bg-[#1C1B18] text-[#F9F8F3] py-20 px-4 sm:px-6 lg:px-8 my-12">
+        <section className="bg-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8 my-12">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
             <div className="space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#A37D4C]">
+              <span className="text-xs font-bold uppercase tracking-widest text-sky-500">
                 Sistem Pembayaran Terpercaya
               </span>
-              <h2 className="font-serif text-4xl sm:text-5xl font-bold leading-tight">
+              <h2 className="font-heading text-4xl sm:text-5xl font-bold leading-tight">
                 Transaksi Instan via DOKU Payment Gateway
               </h2>
-              <p className="text-sm text-[#A39E93] leading-relaxed">
+              <p className="text-sm text-slate-400 leading-relaxed">
                 Platform kami menggunakan integrasi otomatis DOKU Payment Gateway. Anda dapat melakukan pembayaran via QRIS, Bank Virtual Account (BCA, Mandiri, BRI, BNI), Credit Card, maupun E-Wallet favorit Anda secara real-time.
               </p>
               <div className="pt-2">
                 <Link
                   href="/?category=TEMPLATE"
-                  className="inline-flex items-center space-x-2 bg-[#A37D4C] text-[#1C1B18] hover:bg-[#F9F8F3] px-6 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors"
+                  className="inline-flex items-center space-x-2 bg-sky-500 text-slate-900 hover:bg-slate-50 px-6 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors"
                 >
                   <span>Mulai Belanja Sekarang</span>
                   <ArrowRight className="w-4 h-4" />
@@ -149,30 +149,30 @@ export default async function HomePage({
               </div>
             </div>
 
-            <div className="bg-[#2C2A26] p-8 rounded-2xl border border-[#A37D4C]/30 space-y-6">
-              <h3 className="font-serif text-2xl font-bold text-[#F9F8F3]">
+            <div className="bg-slate-800 p-8 rounded-2xl border border-sky-500/30 space-y-6">
+              <h3 className="font-heading text-2xl font-bold text-white">
                 Alur Pembelian 3 Langkah
               </h3>
               <div className="space-y-4 text-sm text-[#E6E3D8]">
                 <div className="flex items-start space-x-4">
-                  <div className="w-7 h-7 rounded-full bg-[#A37D4C] text-[#1C1B18] flex items-center justify-center font-bold text-xs shrink-0">1</div>
+                  <div className="w-7 h-7 rounded-full bg-sky-500 text-slate-900 flex items-center justify-center font-bold text-xs shrink-0">1</div>
                   <div>
                     <h4 className="font-semibold text-white">Pilih Produk Digital</h4>
-                    <p className="text-xs text-[#A39E93]">Pilih template, preset, atau e-book yang Anda inginkan.</p>
+                    <p className="text-xs text-slate-400">Pilih template, preset, atau e-book yang Anda inginkan.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-7 h-7 rounded-full bg-[#A37D4C] text-[#1C1B18] flex items-center justify-center font-bold text-xs shrink-0">2</div>
+                  <div className="w-7 h-7 rounded-full bg-sky-500 text-slate-900 flex items-center justify-center font-bold text-xs shrink-0">2</div>
                   <div>
                     <h4 className="font-semibold text-white">Bayar via DOKU Gateway</h4>
-                    <p className="text-xs text-[#A39E93]">Selesaikan pembayaran via QRIS, Bank Transfer, atau E-Wallet.</p>
+                    <p className="text-xs text-slate-400">Selesaikan pembayaran via QRIS, Bank Transfer, atau E-Wallet.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-7 h-7 rounded-full bg-[#A37D4C] text-[#1C1B18] flex items-center justify-center font-bold text-xs shrink-0">3</div>
+                  <div className="w-7 h-7 rounded-full bg-sky-500 text-slate-900 flex items-center justify-center font-bold text-xs shrink-0">3</div>
                   <div>
                     <h4 className="font-semibold text-white">Unduh Langsung File Digital</h4>
-                    <p className="text-xs text-[#A39E93]">Dapatkan link unduhan terproteksi instan di halaman sukses.</p>
+                    <p className="text-xs text-slate-400">Dapatkan link unduhan terproteksi instan di halaman sukses.</p>
                   </div>
                 </div>
               </div>

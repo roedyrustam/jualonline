@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /order/success/
+Disallow: /checkout/
+
+Sitemap: http://localhost:3005/sitemap.xml

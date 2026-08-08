@@ -68,7 +68,7 @@ export default function TrackOrderPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F9F8F3]">
+    <div className="min-h-screen flex flex-col bg-slate-50">
       <Navbar />
 
       <main className="flex-1 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
@@ -76,7 +76,7 @@ export default function TrackOrderPage() {
         <div className="mb-6">
           <Link
             href="/"
-            className="inline-flex items-center space-x-2 text-xs font-semibold text-[#5C5953] hover:text-[#1C1B18]"
+            className="inline-flex items-center space-x-2 text-xs font-semibold text-slate-500 hover:text-slate-900"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Kembali ke Storefront Utama</span>
@@ -84,35 +84,35 @@ export default function TrackOrderPage() {
         </div>
 
         <div className="text-center space-y-3 mb-10">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#A37D4C]">
+          <span className="text-xs font-bold uppercase tracking-widest text-sky-500">
             Layanan Mandiri Pembeli
           </span>
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#1C1B18]">
+          <h1 className="font-heading text-3xl sm:text-5xl font-bold text-slate-900">
             Cek Pesanan &amp; Unduh File Digital
           </h1>
-          <p className="text-xs sm:text-sm text-[#5C5953] max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
             Masukkan Nomor Pesanan (contoh: <code>DKU-xxxx</code>) atau Alamat Email Anda untuk menemukan riwayat pembelian dan mengunduh ulang produk digital Anda.
           </p>
         </div>
 
         {/* Search Box */}
-        <div className="bg-white p-6 rounded-2xl border border-[#E6E3D8] shadow-sm mb-10">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mb-10">
           <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3">
             <div className="relative flex-1">
-              <Search className="w-4 h-4 text-[#5C5953] absolute left-4 top-4" />
+              <Search className="w-4 h-4 text-slate-500 absolute left-4 top-4" />
               <input
                 type="text"
                 required
                 placeholder="Masukkan Nomor Order (DKU-...) atau Email..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-[#E6E3D8] text-xs text-[#1C1B18] focus:outline-none focus:border-[#1C1B18]"
+                className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-slate-900"
               />
             </div>
             <button
               type="submit"
               disabled={loading}
-              className="px-8 py-3.5 bg-[#1C1B18] hover:bg-[#0F4C3A] text-white rounded-xl font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md disabled:opacity-50"
+              className="px-8 py-3.5 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md disabled:opacity-50"
             >
               {loading ? 'Mencari...' : 'Cek Pesanan'}
             </button>
@@ -129,22 +129,22 @@ export default function TrackOrderPage() {
         {/* Orders List Result */}
         {searched && orders.length > 0 && (
           <div className="space-y-6">
-            <h2 className="font-serif text-xl font-bold text-[#1C1B18]">
+            <h2 className="font-heading text-xl font-bold text-slate-900">
               Ditemukan {orders.length} Pesanan:
             </h2>
 
             {orders.map((item) => (
               <div
                 key={item.id}
-                className="bg-white p-6 sm:p-8 rounded-2xl border border-[#E6E3D8] shadow-sm space-y-6"
+                className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6"
               >
                 
                 {/* Header Row */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-[#E6E3D8] gap-2 text-xs">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-2 text-xs">
                   <div>
-                    <span className="text-[10px] uppercase font-bold text-[#A37D4C]">Nomor Pesanan</span>
-                    <h3 className="font-mono text-base font-bold text-[#1C1B18]">{item.orderNumber}</h3>
-                    <span className="text-[#5C5953] text-[11px]">
+                    <span className="text-[10px] uppercase font-bold text-sky-500">Nomor Pesanan</span>
+                    <h3 className="font-mono text-base font-bold text-slate-900">{item.orderNumber}</h3>
+                    <span className="text-slate-500 text-[11px]">
                       {new Date(item.createdAt).toLocaleDateString('id-ID', {
                         day: '2-digit',
                         month: 'short',
@@ -157,7 +157,7 @@ export default function TrackOrderPage() {
 
                   <div>
                     {item.status === 'PAID' ? (
-                      <span className="inline-flex items-center space-x-1 bg-[#E6F0EC] text-[#0F4C3A] px-3 py-1 rounded-full text-xs font-bold">
+                      <span className="inline-flex items-center space-x-1 bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-xs font-bold">
                         <CheckCircle2 className="w-3.5 h-3.5" />
                         <span>PAID / LUNAS</span>
                       </span>
@@ -173,38 +173,38 @@ export default function TrackOrderPage() {
                 {/* Details Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                   <div>
-                    <span className="text-[#5C5953] block">Produk Digital:</span>
-                    <span className="font-serif text-base font-bold text-[#1C1B18]">{item.productTitle}</span>
-                    <span className="block text-[10px] text-[#A37D4C] uppercase font-bold mt-0.5">{item.productCategory}</span>
+                    <span className="text-slate-500 block">Produk Digital:</span>
+                    <span className="font-heading text-base font-bold text-slate-900">{item.productTitle}</span>
+                    <span className="block text-[10px] text-sky-500 uppercase font-bold mt-0.5">{item.productCategory}</span>
                   </div>
 
                   <div className="sm:text-right">
-                    <span className="text-[#5C5953] block">Total Pembayaran:</span>
-                    <span className="font-serif text-lg font-bold text-[#0F4C3A]">{formatRupiah(item.totalAmount)}</span>
-                    <span className="block text-[11px] text-[#5C5953]">DOKU Gateway</span>
+                    <span className="text-slate-500 block">Total Pembayaran:</span>
+                    <span className="font-heading text-lg font-bold text-indigo-600">{formatRupiah(item.totalAmount)}</span>
+                    <span className="block text-[11px] text-slate-500">DOKU Gateway</span>
                   </div>
                 </div>
 
                 {/* Download Action Area */}
                 {item.status === 'PAID' && item.downloadToken ? (
-                  <div className="pt-4 border-t border-[#E6E3D8] flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="text-xs text-[#5C5953] space-y-1">
+                  <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="text-xs text-slate-500 space-y-1">
                       <div className="flex items-center space-x-2">
-                        <ShieldCheck className="w-4 h-4 text-[#0F4C3A]" />
+                        <ShieldCheck className="w-4 h-4 text-indigo-600" />
                         <span>File Terproteksi dengan Token Aktif</span>
                       </div>
                     </div>
 
                     <a
                       href={`/api/download/${item.downloadToken}`}
-                      className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-[#0F4C3A] hover:bg-[#1C1B18] text-white px-6 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer"
+                      className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-indigo-600 hover:bg-slate-900 text-white px-6 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer"
                     >
                       <Download className="w-4 h-4" />
                       <span>Unduh File Digital</span>
                     </a>
                   </div>
                 ) : (
-                  <div className="pt-4 border-t border-[#E6E3D8] text-xs text-[#5C5953]">
+                  <div className="pt-4 border-t border-slate-200 text-xs text-slate-500">
                     <p>Pembayaran belum terkonfirmasi lunas. Silakan selesaikan pembayaran via DOKU.</p>
                   </div>
                 )}

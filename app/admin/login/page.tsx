@@ -39,25 +39,25 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-[#F9F8F3] px-4">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-slate-50 px-4">
       
       <div className="mb-6">
-        <Link href="/" className="inline-flex items-center space-x-2 text-xs font-semibold text-[#5C5953] hover:text-[#1C1B18]">
+        <Link href="/" className="inline-flex items-center space-x-2 text-xs font-semibold text-slate-500 hover:text-slate-900">
           <ArrowLeft className="w-4 h-4" />
           <span>Kembali ke Storefront Utama</span>
         </Link>
       </div>
 
-      <div className="w-full max-w-md bg-white p-8 rounded-2xl border border-[#E6E3D8] shadow-md space-y-6">
+      <div className="w-full max-w-md bg-white p-8 rounded-2xl border border-slate-200 shadow-md space-y-6">
         
         <div className="text-center space-y-2">
-          <div className="w-12 h-12 rounded-full bg-[#1C1B18] text-[#F9F8F3] flex items-center justify-center font-serif text-xl font-bold mx-auto">
+          <div className="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center font-heading text-xl font-bold mx-auto">
             A
           </div>
-          <h1 className="font-serif text-2xl font-bold text-[#1C1B18]">
+          <h1 className="font-heading text-2xl font-bold text-slate-900">
             Atelier Admin Portal
           </h1>
-          <p className="text-xs text-[#5C5953]">
+          <p className="text-xs text-slate-500">
             Masuk untuk mengelola produk digital &amp; pemantauan transaksi DOKU
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function AdminLoginPage() {
         <form onSubmit={handleLogin} className="space-y-4">
           
           <div>
-            <label className="block text-xs font-semibold text-[#1C1B18] uppercase tracking-wider mb-1">
+            <label className="block text-xs font-semibold text-slate-900 uppercase tracking-wider mb-1">
               Email Admin
             </label>
             <input
@@ -79,12 +79,12 @@ export default function AdminLoginPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-[#E6E3D8] text-xs text-[#1C1B18] focus:outline-none focus:border-[#1C1B18]"
+              className="w-full px-4 py-3 rounded-lg border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-slate-900"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-[#1C1B18] uppercase tracking-wider mb-1">
+            <label className="block text-xs font-semibold text-slate-900 uppercase tracking-wider mb-1">
               Password
             </label>
             <input
@@ -92,28 +92,28 @@ export default function AdminLoginPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-[#E6E3D8] text-xs text-[#1C1B18] focus:outline-none focus:border-[#1C1B18]"
+              className="w-full px-4 py-3 rounded-lg border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-slate-900"
             />
           </div>
 
-          <div className="p-3 bg-[#F3F0E6] rounded-lg border border-[#E6E3D8] text-[11px] text-[#5C5953] space-y-0.5">
-            <span className="font-bold text-[#1C1B18] block">Kredensial Default Demo:</span>
-            <p>Email: <code className="text-[#0F4C3A] font-bold">admin@toko.com</code></p>
-            <p>Password: <code className="text-[#0F4C3A] font-bold">admin123</code></p>
+          <div className="p-3 bg-white rounded-lg border border-slate-200 text-[11px] text-slate-500 space-y-0.5">
+            <span className="font-bold text-slate-900 block">Kredensial Default Demo:</span>
+            <p>Email: <code className="text-indigo-600 font-bold">admin@toko.com</code></p>
+            <p>Password: <code className="text-indigo-600 font-bold">admin123</code></p>
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3.5 bg-[#1C1B18] hover:bg-[#0F4C3A] text-[#F9F8F3] rounded-xl font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md disabled:opacity-50"
+            className="w-full py-3.5 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md disabled:opacity-50"
           >
             {loading ? 'Memverifikasi Kredensial...' : 'Masuk Ke Dashboard Admin'}
           </button>
 
         </form>
 
-        <div className="pt-4 border-t border-[#E6E3D8] text-center text-[11px] text-[#5C5953] flex items-center justify-center space-x-1.5">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#0F4C3A]" />
+        <div className="pt-4 border-t border-slate-200 text-center text-[11px] text-slate-500 flex items-center justify-center space-x-1.5">
+          <ShieldCheck className="w-3.5 h-3.5 text-indigo-600" />
           <span>Sistem Proteksi Session Cookie Terenkripsi</span>
         </div>
 

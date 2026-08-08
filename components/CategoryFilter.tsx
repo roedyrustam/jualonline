@@ -32,8 +32,8 @@ export default function CategoryFilter() {
             onClick={() => handleSelect(cat.key)}
             className={`px-5 py-2.5 rounded-full text-xs font-medium tracking-wider uppercase transition-all duration-200 cursor-pointer ${
               isActive
-                ? 'bg-[#1C1B18] text-[#F9F8F3] shadow-md border border-[#1C1B18]'
-                : 'bg-white text-[#5C5953] border border-[#E6E3D8] hover:border-[#1C1B18] hover:text-[#1C1B18]'
+                ? 'bg-slate-900 text-white shadow-md border border-slate-900'
+                : 'bg-white text-slate-500 border border-slate-200 hover:border-slate-900 hover:text-slate-900'
             }`}
           >
             {cat.label}

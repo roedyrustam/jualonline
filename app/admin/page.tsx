@@ -44,34 +44,34 @@ export default async function AdminOverviewPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F8F3] text-[#1C1B18]">
+    <div className="min-h-screen bg-slate-50 text-slate-900">
       
       {/* Admin Top Navbar */}
-      <header className="bg-[#1C1B18] text-[#F9F8F3] border-b border-[#2C2A26] sticky top-0 z-30">
+      <header className="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-full bg-[#A37D4C] text-[#1C1B18] flex items-center justify-center font-serif text-base font-bold">
+              <div className="w-8 h-8 rounded-full bg-sky-500 text-slate-900 flex items-center justify-center font-heading text-base font-bold">
                 A
               </div>
-              <span className="font-serif text-xl font-bold tracking-tight">
-                ATELIER <span className="text-[#A37D4C]">Admin Portal</span>
+              <span className="font-heading text-xl font-bold tracking-tight">
+                ATELIER <span className="text-sky-500">Admin Portal</span>
               </span>
             </div>
 
             <div className="flex items-center space-x-6">
               <nav className="flex items-center space-x-4 text-xs font-semibold">
-                <Link href="/admin" className="text-[#A37D4C] border-b-2 border-[#A37D4C] py-2">
+                <Link href="/admin" className="text-sky-500 border-b-2 border-sky-500 py-2">
                   Dashboard &amp; Transaksi DOKU
                 </Link>
-                <Link href="/admin/products" className="text-[#A39E93] hover:text-white transition-colors py-2">
+                <Link href="/admin/products" className="text-slate-400 hover:text-white transition-colors py-2">
                   Kelola Produk (CRUD)
                 </Link>
-                <Link href="/admin/coupons" className="text-[#A39E93] hover:text-white transition-colors py-2">
+                <Link href="/admin/coupons" className="text-slate-400 hover:text-white transition-colors py-2">
                   Kode Kupon Diskon
                 </Link>
-                <Link href="/" target="_blank" className="text-[#A39E93] hover:text-white transition-colors py-2">
+                <Link href="/" target="_blank" className="text-slate-400 hover:text-white transition-colors py-2">
                   Lihat Storefront ↗
                 </Link>
               </nav>
@@ -79,7 +79,7 @@ export default async function AdminOverviewPage() {
               <form action="/api/admin/auth/logout" method="POST">
                 <button
                   type="submit"
-                  className="inline-flex items-center space-x-1.5 text-xs text-[#A39E93] hover:text-red-400 font-medium transition-colors cursor-pointer"
+                  className="inline-flex items-center space-x-1.5 text-xs text-slate-400 hover:text-red-400 font-medium transition-colors cursor-pointer"
                 >
                   <LogOut className="w-3.5 h-3.5" />
                   <span>Keluar</span>
@@ -97,10 +97,10 @@ export default async function AdminOverviewPage() {
         {/* Header Title */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="font-serif text-3xl font-bold text-[#1C1B18]">
+            <h1 className="font-heading text-3xl font-bold text-slate-900">
               Dashboard Ringkasan &amp; Transaksi DOKU
             </h1>
-            <p className="text-xs text-[#5C5953]">
+            <p className="text-xs text-slate-500">
               Pemantauan pendapatan instan, status webhook DOKU, dan log transaksi
             </p>
           </div>
@@ -108,15 +108,15 @@ export default async function AdminOverviewPage() {
           <div className="flex items-center space-x-3">
             <Link
               href="/admin/coupons"
-              className="inline-flex items-center space-x-2 bg-white border border-[#E6E3D8] hover:border-[#1C1B18] text-[#1C1B18] text-xs font-bold px-4 py-3 rounded-xl transition-all shadow-xs"
+              className="inline-flex items-center space-x-2 bg-white border border-slate-200 hover:border-slate-900 text-slate-900 text-xs font-bold px-4 py-3 rounded-xl transition-all shadow-xs"
             >
-              <Tag className="w-4 h-4 text-[#A37D4C]" />
+              <Tag className="w-4 h-4 text-sky-500" />
               <span>Kupon ({totalCouponsCount})</span>
             </Link>
 
             <Link
               href="/admin/products"
-              className="inline-flex items-center space-x-2 bg-[#1C1B18] hover:bg-[#0F4C3A] text-white text-xs font-bold px-5 py-3 rounded-xl transition-all shadow-sm"
+              className="inline-flex items-center space-x-2 bg-slate-900 hover:bg-indigo-600 text-white text-xs font-bold px-5 py-3 rounded-xl transition-all shadow-sm"
             >
               <Package className="w-4 h-4" />
               <span>Kelola Produk (CRUD)</span>
@@ -128,66 +128,66 @@ export default async function AdminOverviewPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
           {/* Metric 1 */}
-          <div className="bg-white p-6 rounded-2xl border border-[#E6E3D8] shadow-xs space-y-2">
-            <div className="flex items-center justify-between text-[#5C5953]">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+            <div className="flex items-center justify-between text-slate-500">
               <span className="text-xs uppercase font-bold tracking-wider">Total Pendapatan Lunas</span>
-              <DollarSign className="w-5 h-5 text-[#0F4C3A]" />
+              <DollarSign className="w-5 h-5 text-indigo-600" />
             </div>
-            <p className="font-serif text-3xl font-bold text-[#0F4C3A]">
+            <p className="font-heading text-3xl font-bold text-indigo-600">
               {formatRupiah(totalRevenue)}
             </p>
-            <p className="text-[11px] text-[#5C5953]">Dari transaksi berstatus PAID</p>
+            <p className="text-[11px] text-slate-500">Dari transaksi berstatus PAID</p>
           </div>
 
           {/* Metric 2 */}
-          <div className="bg-white p-6 rounded-2xl border border-[#E6E3D8] shadow-xs space-y-2">
-            <div className="flex items-center justify-between text-[#5C5953]">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+            <div className="flex items-center justify-between text-slate-500">
               <span className="text-xs uppercase font-bold tracking-wider">Transaksi Sukses (PAID)</span>
-              <CheckCircle2 className="w-5 h-5 text-[#0F4C3A]" />
+              <CheckCircle2 className="w-5 h-5 text-indigo-600" />
             </div>
-            <p className="font-serif text-3xl font-bold text-[#1C1B18]">
+            <p className="font-heading text-3xl font-bold text-slate-900">
               {paidOrdersCount}
             </p>
-            <p className="text-[11px] text-[#5C5953]">Pesanan terverifikasi DOKU</p>
+            <p className="text-[11px] text-slate-500">Pesanan terverifikasi DOKU</p>
           </div>
 
           {/* Metric 3 */}
-          <div className="bg-white p-6 rounded-2xl border border-[#E6E3D8] shadow-xs space-y-2">
-            <div className="flex items-center justify-between text-[#5C5953]">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+            <div className="flex items-center justify-between text-slate-500">
               <span className="text-xs uppercase font-bold tracking-wider">Total Semua Pesanan</span>
-              <ShoppingCart className="w-5 h-5 text-[#A37D4C]" />
+              <ShoppingCart className="w-5 h-5 text-sky-500" />
             </div>
-            <p className="font-serif text-3xl font-bold text-[#1C1B18]">
+            <p className="font-heading text-3xl font-bold text-slate-900">
               {totalOrdersCount}
             </p>
-            <p className="text-[11px] text-[#5C5953]">Termasuk status PENDING &amp; FAILED</p>
+            <p className="text-[11px] text-slate-500">Termasuk status PENDING &amp; FAILED</p>
           </div>
 
           {/* Metric 4 */}
-          <div className="bg-white p-6 rounded-2xl border border-[#E6E3D8] shadow-xs space-y-2">
-            <div className="flex items-center justify-between text-[#5C5953]">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+            <div className="flex items-center justify-between text-slate-500">
               <span className="text-xs uppercase font-bold tracking-wider">Produk Digital Aktif</span>
-              <Package className="w-5 h-5 text-[#1C1B18]" />
+              <Package className="w-5 h-5 text-slate-900" />
             </div>
-            <p className="font-serif text-3xl font-bold text-[#1C1B18]">
+            <p className="font-heading text-3xl font-bold text-slate-900">
               {totalProductsCount}
             </p>
-            <p className="text-[11px] text-[#5C5953]">Template, Preset &amp; E-Book</p>
+            <p className="text-[11px] text-slate-500">Template, Preset &amp; E-Book</p>
           </div>
 
         </div>
 
         {/* Transactions Data Table */}
-        <div className="bg-white rounded-2xl border border-[#E6E3D8] overflow-hidden shadow-xs space-y-4">
+        <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs space-y-4">
           
-          <div className="p-6 border-b border-[#E6E3D8] flex items-center justify-between">
+          <div className="p-6 border-b border-slate-200 flex items-center justify-between">
             <div>
-              <h2 className="font-serif text-xl font-bold text-[#1C1B18]">
+              <h2 className="font-heading text-xl font-bold text-slate-900">
                 Riwayat Transaksi DOKU Payment Gateway
               </h2>
-              <p className="text-xs text-[#5C5953]">15 Pesanan terbaru yang masuk ke sistem</p>
+              <p className="text-xs text-slate-500">15 Pesanan terbaru yang masuk ke sistem</p>
             </div>
-            <div className="flex items-center space-x-2 text-xs text-[#0F4C3A] bg-[#E6F0EC] px-3 py-1.5 rounded-full font-bold">
+            <div className="flex items-center space-x-2 text-xs text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-full font-bold">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>DOKU Webhook Active</span>
             </div>
@@ -195,7 +195,7 @@ export default async function AdminOverviewPage() {
 
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#F9F8F3] text-[#5C5953] uppercase text-[10px] tracking-wider border-b border-[#E6E3D8]">
+              <thead className="bg-slate-50 text-slate-500 uppercase text-[10px] tracking-wider border-b border-slate-200">
                 <tr>
                   <th className="p-4 font-bold">No. Order</th>
                   <th className="p-4 font-bold">Invoice DOKU</th>
@@ -207,13 +207,13 @@ export default async function AdminOverviewPage() {
                   <th className="p-4 font-bold">Status DOKU</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E6E3D8] text-[#1C1B18]">
+              <tbody className="divide-y divide-[#E6E3D8] text-slate-900">
                 {orders.length > 0 ? (
                   orders.map((order) => (
-                    <tr key={order.id} className="hover:bg-[#F9F8F3]/60 transition-colors">
+                    <tr key={order.id} className="hover:bg-slate-50/60 transition-colors">
                       <td className="p-4 font-mono font-bold">{order.orderNumber}</td>
-                      <td className="p-4 font-mono text-[11px] text-[#5C5953]">{order.dokuInvoiceNumber || '-'}</td>
-                      <td className="p-4 text-[#5C5953]">
+                      <td className="p-4 font-mono text-[11px] text-slate-500">{order.dokuInvoiceNumber || '-'}</td>
+                      <td className="p-4 text-slate-500">
                         {new Date(order.createdAt).toLocaleDateString('id-ID', {
                           day: '2-digit',
                           month: 'short',
@@ -223,16 +223,16 @@ export default async function AdminOverviewPage() {
                         })}
                       </td>
                       <td className="p-4 font-medium">{order.customerName}</td>
-                      <td className="p-4 text-[#5C5953]">{order.customerEmail}</td>
-                      <td className="p-4 font-mono text-[11px] text-[#0F4C3A] font-bold">
+                      <td className="p-4 text-slate-500">{order.customerEmail}</td>
+                      <td className="p-4 font-mono text-[11px] text-indigo-600 font-bold">
                         {order.couponCode || '-'}
                       </td>
-                      <td className="p-4 font-serif font-bold text-[#1C1B18]">
+                      <td className="p-4 font-heading font-bold text-slate-900">
                         {formatRupiah(order.totalAmount)}
                       </td>
                       <td className="p-4">
                         {order.status === 'PAID' ? (
-                          <span className="inline-flex items-center space-x-1 bg-[#E6F0EC] text-[#0F4C3A] px-2.5 py-1 rounded-full text-[10px] font-bold">
+                          <span className="inline-flex items-center space-x-1 bg-indigo-50 text-indigo-600 px-2.5 py-1 rounded-full text-[10px] font-bold">
                             <CheckCircle2 className="w-3 h-3" />
                             <span>PAID / LUNAS</span>
                           </span>
@@ -247,7 +247,7 @@ export default async function AdminOverviewPage() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={8} className="p-8 text-center text-[#5C5953]">
+                    <td colSpan={8} className="p-8 text-center text-slate-500">
                       Belum ada transaksi yang tercatat.
                     </td>
                   </tr>

@@ -1,18 +1,12 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import { Inter, Outfit } from 'next/font/google';
 import './globals.css';
 
-const cormorant = Cormorant_Garamond({ 
-  subsets: ['latin'], 
-  weight: ['400', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-cormorant' 
-});
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-jakarta' });
+const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export const viewport: Viewport = {
-  themeColor: '#0F4C3A',
+  themeColor: '#4f46e5',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
@@ -43,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={`${cormorant.variable} ${inter.variable} ${jakarta.variable}`}>
+    <html lang="id" className={`${inter.variable} ${outfit.variable}`}>
       <body>{children}</body>
     </html>
   );
