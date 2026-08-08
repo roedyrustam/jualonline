@@ -75,6 +75,21 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/api/orders/status/[orderId]/route.js"
+    ],
+    "/legal/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/legal/layout.js"
+    ],
+    "/legal/kebijakan-privasi/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/legal/kebijakan-privasi/page.js"
+    ],
+    "/legal/perlindungan-data-pribadi/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/legal/perlindungan-data-pribadi/page.js"
     ]
   }
 }

@@ -7,10 +7,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-8 pb-12 border-b border-slate-800">
           
           {/* Brand Col */}
-          <div className="space-y-4 md:col-span-1">
+          <div className="space-y-4 sm:col-span-2 md:col-span-2">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-full bg-sky-500 text-slate-900 flex items-center justify-center font-heading text-lg font-bold">
                 A
@@ -68,6 +68,17 @@ export default function Footer() {
                 <span>Dukungan Teknis & Pembaruan File</span>
               </div>
             </div>
+          </div>
+
+          {/* Legal Col */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-semibold tracking-wider text-sky-500 uppercase">Informasi Legal</h4>
+            <ul className="space-y-2 text-sm text-[#E6E3D8]">
+              <li><Link href="/legal/kebijakan-privasi" className="hover:text-white transition-colors">Kebijakan Privasi</Link></li>
+              <li><Link href="/legal/syarat-dan-ketentuan" className="hover:text-white transition-colors">Syarat dan Ketentuan</Link></li>
+              <li><Link href="/legal/perlindungan-data-pribadi" className="hover:text-white transition-colors">Perlindungan Data</Link></li>
+              <li><Link href="/legal/syarat-pembayaran" className="hover:text-white transition-colors">Syarat Pembayaran</Link></li>
+            </ul>
           </div>
 
         </div>
