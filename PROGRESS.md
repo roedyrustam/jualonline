@@ -12,7 +12,7 @@ This checklist is maintained according to the `zero-to-prod-orchestrator` guidel
 - `[x]` Initialize single repo foundation.
 - `[x]` Set up language runtimes: Node.js 22 LTS.
 - `[x]` Configure TypeScript strict configurations.
-- `[ ]` Setup initial CI/CD pipeline template.
+- `[x]` Setup initial CI/CD pipeline template.
 
 ## PHASE 3: Database & Core Architecture
 - `[x]` Design normalized relational schemas and document models.

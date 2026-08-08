@@ -13,6 +13,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Added `Playwright` End-to-End (E2E) testing framework.
 - Wrote E2E automated test for the Guest Checkout flow (`tests/e2e/checkout-flow.spec.ts`).
 - Created `.github/workflows/test-and-deploy.yml` for Continuous Integration.
+- Added comprehensive legal documentation and Next.js routes for Kebijakan Privasi, Syarat & Ketentuan, Perlindungan Data Pribadi (UU PDP), and Syarat Pembayaran.
 
 ### Changed
 - Refactored `layout.tsx` to use `next/font/google` for Cormorant Garamond, Inter, and Plus Jakarta Sans to eliminate Cumulative Layout Shift (CLS) and improve LCP metrics.
@@ -21,6 +22,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Removed custom `DokuPaymentModal` simulator completely. The application now natively integrates the **DOKU Jokul Checkout Popup** library, allowing the official DOKU Payment page to render directly as an in-app modal without forcing users to leave the application (with automatic fallback to redirect if the script fails).
 - Reinstated background payment polling: The checkout page now actively polls `/api/orders/status` behind the scenes while the DOKU modal is open. Upon detecting a successful webhook confirmation, the frontend instantly closes the flow and redirects the user to the secured success and file-download page.
 - Complete visual UI overhaul of `DokuPaymentModal.tsx` to implement a highly premium, glassmorphism aesthetic with animated real-time scanning states and better user affordances (Removed in subsequent iteration in favor of official DOKU flow).
+- **Major UI/UX Revamp**: Upgraded the overall theme to a modern, fresh tech aesthetic. Replaced editorial dark greens/browns with vibrant Indigo and Sky Blue, transitioned from Cormorant Garamond to modern sans-serif fonts (Outfit and Inter), and updated all components to standard Tailwind v4 utility classes.
+- Removed "Admin Area" access buttons from public-facing Navbar and Footer components.
 
 ### Fixed
 - Fixed DOKU Signature Verification failures when simulating payments locally by properly distinguishing between production webhook payloads and local simulator payloads.
