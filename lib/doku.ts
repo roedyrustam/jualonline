@@ -8,8 +8,8 @@ export interface DokuConfig {
 
 export function getDokuConfig(): DokuConfig {
   return {
-    clientId: process.env.DOKU_CLIENT_ID || 'BRN-0265-1785778928588',
-    secretKey: process.env.DOKU_SECRET_KEY || 'doku_key_sandbox_1937b31427cf4b948200287a5c0dc707',
+    clientId: process.env.DOKU_CLIENT_ID || '',
+    secretKey: process.env.DOKU_SECRET_KEY || '',
     isSandbox: process.env.DOKU_ENVIRONMENT !== 'production',
   };
 }
