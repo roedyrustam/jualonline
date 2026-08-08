@@ -55,6 +55,26 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/track-order/page.js"
+    ],
+    "/checkout/[productSlug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/checkout/[productSlug]/page.js"
+    ],
+    "/api/products/[slug]/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/products/[slug]/route.js"
+    ],
+    "/api/checkout/doku/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/checkout/doku/route.js"
+    ],
+    "/api/orders/status/[orderId]/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/orders/status/[orderId]/route.js"
     ]
   }
 }

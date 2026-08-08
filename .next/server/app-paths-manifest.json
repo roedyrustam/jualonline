@@ -1,7 +1,12 @@
 {
+  "/api/reviews/route": "app/api/reviews/route.js",
+  "/api/products/[slug]/route": "app/api/products/[slug]/route.js",
+  "/api/checkout/doku/route": "app/api/checkout/doku/route.js",
+  "/api/orders/status/[orderId]/route": "app/api/orders/status/[orderId]/route.js",
   "/page": "app/page.js",
   "/admin/login/page": "app/admin/login/page.js",
   "/admin/page": "app/admin/page.js",
   "/products/[slug]/page": "app/products/[slug]/page.js",
+  "/checkout/[productSlug]/page": "app/checkout/[productSlug]/page.js",
   "/track-order/page": "app/track-order/page.js"
 }
