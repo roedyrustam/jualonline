@@ -76,8 +76,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400">
           <p>© 2026 ATELIER Digital Store. Powered by Next.js 15 & DOKU Payment Gateway.</p>
           <div className="mt-4 sm:mt-0 flex items-center space-x-6">
-            <Link href="/admin/login" className="hover:text-white transition-colors">Admin Login</Link>
-            <span>-</span>
+
             <span>All rights reserved.</span>
           </div>
         </div>

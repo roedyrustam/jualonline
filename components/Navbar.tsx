@@ -49,13 +49,7 @@ export default function Navbar() {
               <span>Cek Pesanan</span>
             </Link>
 
-            <Link
-              href="/admin"
-              className="inline-flex items-center space-x-1.5 text-xs font-medium text-slate-500 hover:text-slate-900 border border-slate-200 bg-white px-3 py-2 rounded-lg hover:border-slate-900 transition-all"
-            >
-              <Lock className="w-3.5 h-3.5 text-sky-500" />
-              <span>Admin Area</span>
-            </Link>
+
           </div>
 
         </div>
