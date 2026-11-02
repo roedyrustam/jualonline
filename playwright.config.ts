@@ -11,6 +11,12 @@ export default defineConfig({
     baseURL: 'http://localhost:3005',
     trace: 'on-first-retry',
   },
+  webServer: {
+    command: 'npx next start -p 3005',
+    url: 'http://localhost:3005',
+    reuseExistingServer: !process.env.CI,
+    timeout: 60000,
+  },
   projects: [
     {
       name: 'chromium',
